@@ -48,12 +48,12 @@ pipeline {
                         // Unix commands
                         sh 'docker stop simple-webapp-container || true'
                         sh 'docker rm simple-webapp-container || true'
-                        sh 'docker run -d -p 8080:80 --name simple-webapp-container simple-webapp:latest'
+                        sh 'docker run -d -p 8090:80 --name simple-webapp-container simple-webapp:latest'
                     } else {
                         // Windows commands
                         bat 'docker stop simple-webapp-container || (exit 0)'
                         bat 'docker rm simple-webapp-container || (exit 0)'
-                        bat 'docker run -d -p 8080:80 --name simple-webapp-container simple-webapp:latest'
+                        bat 'docker run -d -p 8090:80 --name simple-webapp-container simple-webapp:latest'
                     }
                 }
             }
